@@ -1,0 +1,6 @@
+*
+!.gitignore
+!PKGBUILD
+!.SRCINFO
+!radicle-httpd-bin.install
+!radicle-httpd.service
