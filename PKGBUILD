@@ -1,17 +1,16 @@
 # Maintainer: tippfehlr <tippfehlr at gmail dot com>
 
 pkgname=radicle-node-bin
-# there are no versions attached to the binaries, just upload dates.
-pkgver=20240326
-_srchash="081af03362b5bd3d637ee22011a4e5b51a1f1498"
+epoch=1
+pkgver='1.0.0rc.2'
+_srchash="ea69168f44b1b5a1cfde6e84def408895f6c0b65"
 pkgrel=1
-pkgdesc="node for radicle, a peer-to-peer GitHub alternative"
+pkgdesc="open source, peer-to-peer code collaboration stack built on Git - node"
 arch=('x86_64' 'aarch64')
 license=('Apache-2.0 OR MIT')
 url="https://app.radicle.xyz/nodes/seed.radicle.xyz/rad:z3gqcJUoA1n9HaHKufZs5FCSGazv5"
 _srcurl="https://files.radicle.xyz/$_srchash/$CARCH-unknown-linux-musl"
 _license_url="https://seed.radicle.xyz/raw/rad:z3gqcJUoA1n9HaHKufZs5FCSGazv5/081af03362b5bd3d637ee22011a4e5b51a1f1498/LICENSE-MIT"
-_license_sha256sum="fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d"
 _prefix=$pkgname-$pkgver
 source_x86_64=(
 	$_prefix-radicle-node::$_srcurl/radicle-node
@@ -25,18 +24,14 @@ source_aarch64=(
 	$_prefix-LICENSE-MIT::$_license_url
 	radicle-node.service
 )
-sha256sums_x86_64=(
-	'3cdd52ad01f8d23019b1d7d40fe187b7f516b6a9e29e10b67adb6fb67bd33a47'
-	'dd5a1ff4d2e3960ca98173723feca5497c36c396018f106f4d00e5590f168ce2'
-	$_license_sha256sum
-	'SKIP'
-)
-sha256sums_aarch64=(
-	'38b523533941bcf751f4d862f9511834e99b54de29d67c433d3ea43d1b72fb03'
-	'b09937ff5cceebd35f896af79e1fe7119757957068f13d4debb0bce2e7159026'
-	$_license_sha256sum
-	'SKIP'
-)
+sha256sums_x86_64=('504430d00a8311a75d506292821d338cd54ba57515898576fc71146818962c92'
+                   'b7bfd9063001af48a6ef3510f15a758dc2aa039179d4bbdd426192852b80a982'
+                   'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
+                   '38071bb7e6c362cd587e30e42f42abcb9960612276da88c9099367713e4ca412')
+sha256sums_aarch64=('504430d00a8311a75d506292821d338cd54ba57515898576fc71146818962c92'
+                    'b7bfd9063001af48a6ef3510f15a758dc2aa039179d4bbdd426192852b80a982'
+                    'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
+                    '38071bb7e6c362cd587e30e42f42abcb9960612276da88c9099367713e4ca412')
 install="radicle-node-bin.install"
 provides=('radicle-node')
 conflicts=('radicle-node')
