@@ -1,6 +1,0 @@
-*
-!.gitignore
-!PKGBUILD
-!.SRCINFO
-!radicle-node-bin.install
-!radicle-node.service
