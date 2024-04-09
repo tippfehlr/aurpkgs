@@ -3,35 +3,35 @@
 pkgbase=radicle-bin
 pkgname=(radicle-{cli,node,httpd}-bin)
 epoch=1
-pkgver='1.0.0rc.3'
-_commit="bd8e0ebcda8f6f06dc20641a71614e3778a43fea"
+pkgver='1.0.0rc.4'
+_commit="35567583869c2c24a2e040a0f1e755d4e3d17880"
 pkgrel=1
 pkgdesc="open source, peer-to-peer code collaboration stack built on Git"
 arch=('x86_64' 'aarch64')
 license=('Apache-2.0 OR MIT')
 url="https://app.radicle.xyz/nodes/seed.radicle.xyz/rad:z3gqcJUoA1n9HaHKufZs5FCSGazv5"
 _license_url="https://seed.radicle.xyz/raw/rad:z3gqcJUoA1n9HaHKufZs5FCSGazv5/081af03362b5bd3d637ee22011a4e5b51a1f1498/LICENSE-MIT"
-_prefix=$pkgbase-$pkgver
+_prefix="$pkgbase-$epoch:$pkgver-$pkgrel"
 source_x86_64=(
-	"https://files.radicle.xyz/$_commit/x86_64-unknown-linux-musl/radicle-x86_64-unknown-linux-musl.tar.gz"
+	"$_prefix-x86_64::https://files.radicle.xyz/$_commit/x86_64-unknown-linux-musl/radicle-x86_64-unknown-linux-musl.tar.gz"
 	"$_prefix-LICENSE-MIT::$_license_url"
 	"radicle-node.service"
 	"radicle-httpd.service"
 )
 source_aarch64=(
-	"https://files.radicle.xyz/$_commit/aarch64-unknown-linux-musl/radicle-aarch64-unknown-linux-musl.tar.gz"
+	"$_prefix-aarch64::https://files.radicle.xyz/$_commit/aarch64-unknown-linux-musl/radicle-aarch64-unknown-linux-musl.tar.gz"
 	"$_prefix-LICENSE-MIT::$_license_url"
 	"radicle-node.service"
 	"radicle-httpd.service"
 )
 sha256sums_x86_64=(
-	'a1a65bb519d4041797f48e1c7e005ac3c0188e10b7b3ab0b0603e1d71909189f'
+	'f7dd16e7563d08bd8e4e4784aba952123a3b00b5ab31aafea12eb74ad8aa1fc9'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
 )
 sha256sums_aarch64=(
-	'07d0b0b89d099093051b0aa16d8f61ffbe65707b24317d8432a97c6041abe39d'
+	'858a88ceb6b5c4c400a7557a181b979312f5cfede37b5253bfa4c4f4da1bfe89'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
