@@ -1,0 +1,29 @@
+[__config__]
+oldver = "nvchecker_current.json"
+newver = "nvchecker_new.json"
+keyfile = "secrets.toml"
+
+[helm-synth]
+source = "github"
+github = "mtytel/helm"
+use_max_tag = true
+prefix = "v"
+
+[inav-blackbox-explorer]
+source = "github"
+github = "iNavFlight/blackbox-log-viewer"
+use_latest_release = true
+
+# [radicle]
+
+[servicer]
+source = "github"
+github = "servicer-labs/servicer"
+use_latest_release = true
+prefix = "v"
+
+[wrestic]
+source = "github"
+github = "alvaro17f/wrestic"
+use_latest_release = true
+prefix = "v"
