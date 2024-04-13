@@ -1,0 +1,52 @@
+name: "Check new releases with nvchecker"
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  nvchecker:
+    name: "check for new releases with nvchecker"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install nvchecker
+      - run: |
+          sudo mkdir -p /etc/pki/tls/certs/
+          sudo ln -s /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+      - run: nvchecker -c nvchecker.toml
+      - name: check if versions were changed
+        run: |
+          if [[ $(git diff nvchecker_new.json) ]]; then
+            echo 'NEW_VERSIONS=true' >> $GITHUB_ENV
+          echo 'nvcmp_output<<EOF' >> $GITHUB_ENV
+          echo "$(nvcmp -c nvchecker.toml)" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+          fi
+      - name: commit new versions in nvchecker_new.json
+        if: ${{ env.NEW_VERSIONS }}
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "nvchecker_new.json"
+          default_author: github_actions
+          message: "discover new versions"
+          push: true
+      - if: ${{ env.NEW_VERSIONS }}
+        run: cp nvchecker_new.json nvchecker_current.json
+      - name: create or replace PR
+        if: ${{ env.NEW_VERSIONS }}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          add-paths: "nvchecker_current.json"
+          commit-message: "move to known releases"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          branch: "nvchecker"
+          title: "discovered new releases"
+          body: "```\n${{ env.nvcmp_output }}\n```"
+          labels: "nvchecker"
+          # assignees: 'tippfehlr'
+          # reviewers: 'tippfehlr'
