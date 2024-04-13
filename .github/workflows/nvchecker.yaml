@@ -36,4 +36,4 @@ jobs:
           title: "discovered new releases"
           body: "```\n${{ env.nvcmp_output }}\n```"
           labels: "nvchecker"
-          assignees: "tippfehlr"
+          # assignees: "tippfehlr"
