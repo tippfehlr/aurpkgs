@@ -1,4 +1,5 @@
-# Maintainer: David Runge <dvzrv@archlinux.org>
+# Maintainer: tippfehlr <tippfehlr at tippfehlr dot eu>
+# Contributor: David Runge <dvzrv@archlinux.org>
 
 _name=helm
 pkgbase=helm-synth
