@@ -2,3 +2,6 @@
 !.gitignore
 !PKGBUILD
 !.SRCINFO
+!*.install
+!*.service
+!*.patch
