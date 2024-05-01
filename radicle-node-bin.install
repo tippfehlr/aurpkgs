@@ -1,14 +1,8 @@
-post_install() {
-	echo
-	echo "    Enable the radicle node with \`systemctl --user enable --now radicle-node.service\`"
-	echo
-}
-
 post_upgrade() {
 	echo
-	echo "    Restart the radicle node with \`systemctl --user restart radicle-node.service\` to update"
-	echo
+	echo "    WHEN UPGRADING FROM <= 1.0.0rc.3"
 	echo "    :warning: Manual intervention is required. Run the following command after upgrading and stopping your node:"
 	echo '    $ rad node db exec "DELETE FROM refs;"'
 	echo "    This will delete cached references and force a refresh of the db once you restart your node."
+	echo
 }
