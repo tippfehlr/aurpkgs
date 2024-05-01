@@ -50,7 +50,7 @@ package_radicle-cli-bin() {
 
 	install -Dm644 "man/man1/rad.1" "$pkgdir/usr/share/man/man1/rad.1"
 	install -Dm644 "man/man1/rad-patch.1" "$pkgdir/usr/share/man/man1/rad-patch.1"
-	install -Dm644 "man/man1/git-remote-rad.1" "$pkgdir/usr/share/man/man1/git-remote-add.1"
+	install -Dm644 "man/man1/git-remote-rad.1" "$pkgdir/usr/share/man/man1/git-remote-rad.1"
 	popd >/dev/null
 	install -Dm644 "$_prefix-LICENSE-MIT" "$pkgdir/usr/share/licenses/$pkgname/LICENSE-MIT"
 }
