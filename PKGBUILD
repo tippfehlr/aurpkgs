@@ -3,7 +3,7 @@
 pkgbase=radicle-bin
 pkgname=(radicle-bin radicle-{cli,node,httpd}-bin)
 epoch=1
-_version='1.0.0-rc.7'
+_version='1.0.0-rc.8'
 pkgver=${_version/-/}
 pkgrel=1
 pkgdesc="open source, peer-to-peer code collaboration stack built on Git"
@@ -21,13 +21,13 @@ _source=(
 source_x86_64=(${_source[@]})
 source_aarch64=(${_source[@]})
 sha256sums_x86_64=(
-	'de1a1f64c7ce18c2b7bc6d6a8d12cfd1dedf7c95e6444d579360d29154aa7274'
+	'c7c7ccbf39c0def7cea068132de1614ef1ec78f3f9bc0b55973c7d957e278f5a'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
 )
 sha256sums_aarch64=(
-	'c690f6a056d89d720d1df1fd997ad8b8fb4addaaba5d92bf734a5622f12e65be'
+	'e890c3c8be4f25f8067923d42d6997efc800f32ae61880351eac65352b0a3b44'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
