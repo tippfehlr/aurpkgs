@@ -3,7 +3,7 @@
 pkgbase=radicle-bin
 pkgname=(radicle-bin radicle-{cli,node,httpd}-bin)
 epoch=1
-_version='1.0.0-rc.8'
+_version='1.0.0-rc.9'
 pkgver=${_version/-/}
 pkgrel=1
 pkgdesc="open source, peer-to-peer code collaboration stack built on Git"
@@ -21,13 +21,13 @@ _source=(
 source_x86_64=(${_source[@]})
 source_aarch64=(${_source[@]})
 sha256sums_x86_64=(
-	'c7c7ccbf39c0def7cea068132de1614ef1ec78f3f9bc0b55973c7d957e278f5a'
+	'04e2a76701324344bbe7abeac7d372a9fffc914d5ce9866a020c3efb8823136d'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
 )
 sha256sums_aarch64=(
-	'e890c3c8be4f25f8067923d42d6997efc800f32ae61880351eac65352b0a3b44'
+	'f326f6dba2ffea281670917af20f04c60eef3776d2ab6f21458659a47c0bf4c9'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
@@ -57,7 +57,6 @@ package_radicle-cli-bin() {
 
 package_radicle-node-bin() {
 	pkgdesc+=" - node"
-	install="radicle-node-bin.install"
 	provides=('radicle-node')
 	conflicts=('radicle-node')
 

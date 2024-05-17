@@ -1,8 +1,0 @@
-post_upgrade() {
-	echo
-	echo "    WHEN UPGRADING FROM <= 1.0.0rc.3"
-	echo "    :warning: Manual intervention is required. Run the following command after upgrading and stopping your node:"
-	echo '    $ rad node db exec "DELETE FROM refs;"'
-	echo "    This will delete cached references and force a refresh of the db once you restart your node."
-	echo
-}
