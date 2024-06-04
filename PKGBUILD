@@ -3,7 +3,7 @@
 pkgbase=radicle-bin
 pkgname=(radicle-bin radicle-{cli,node,httpd}-bin)
 epoch=1
-_version='1.0.0-rc.9'
+_version='1.0.0-rc.10'
 pkgver=${_version/-/}
 pkgrel=1
 pkgdesc="open source, peer-to-peer code collaboration stack built on Git"
@@ -21,13 +21,13 @@ _source=(
 source_x86_64=(${_source[@]})
 source_aarch64=(${_source[@]})
 sha256sums_x86_64=(
-	'04e2a76701324344bbe7abeac7d372a9fffc914d5ce9866a020c3efb8823136d'
+	'7291b309eaf8f7424abc5b5e37e8b3632713b57c88ee67cb9d78365e07cdf607'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
 )
 sha256sums_aarch64=(
-	'f326f6dba2ffea281670917af20f04c60eef3776d2ab6f21458659a47c0bf4c9'
+	'ff9b5a8735cc25021d0352ec6289efdf4bf63a99c56bfdef3ce199838c9d9e0f'
 	'fff889db903497b59500b5171806c511b3c83df1100532c2f7aa8f96af46cc4d'
 	'SKIP'
 	'SKIP'
@@ -59,6 +59,7 @@ package_radicle-node-bin() {
 	pkgdesc+=" - node"
 	provides=('radicle-node')
 	conflicts=('radicle-node')
+	install=radicle-node-bin.install
 
 	pushd "radicle-${_version}-$CARCH-unknown-linux-musl" >/dev/null
 	install -Dm755 "bin/radicle-node" "$pkgdir/usr/bin/radicle-node"
