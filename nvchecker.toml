@@ -27,3 +27,9 @@ source = "github"
 github = "alvaro17f/wrestic"
 use_latest_release = true
 prefix = "v"
+
+[autorestic]
+source = "github"
+github = "cupcakearmy/autorestic"
+use_latest_release = true
+prefix = "v"
