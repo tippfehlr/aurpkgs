@@ -1,6 +1,11 @@
 {
   "version": 2,
   "data": {
+    "autorestic": {
+      "version": "1.8.2",
+      "gitref": "refs/tags/v1.8.2",
+      "url": "https://github.com/cupcakearmy/autorestic/releases/tag/v1.8.2"
+    },
     "helm-synth": {
       "version": "0.9.0",
       "gitref": "refs/tags/v0.9.0",
