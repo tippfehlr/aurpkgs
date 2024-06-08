@@ -1,6 +1,6 @@
 # [tippfehlr’s AUR packages](https://aur.archlinux.org/packages?K=tippfehlr&SeB=m)
 
-These are all the packages that I maintain (or co-maintain, though there are none right now).
+These are all the packages that I maintain or co-maintain.
 
 This repository uses [aurpublish](https://github.com/eli-schwartz/aurpublish).
 
