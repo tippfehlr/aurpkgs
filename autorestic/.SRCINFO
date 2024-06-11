@@ -1,13 +1,13 @@
 pkgbase = autorestic
 	pkgdesc = Config driven, easy backup cli for restic
 	pkgver = 1.8.2
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/cupcakearmy/autorestic
 	arch = i686
 	arch = x86_64
 	arch = armv7h
 	arch = aarch64
-	license = Apache License 2.0
+	license = Apache-2.0
 	makedepends = go
 	depends = restic
 	source = autorestic-1.8.2.tar.gz::https://github.com/cupcakearmy/autorestic/archive/refs/tags/v1.8.2.tar.gz
