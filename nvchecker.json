@@ -6,6 +6,11 @@
       "gitref": "refs/tags/v1.8.2",
       "url": "https://github.com/cupcakearmy/autorestic/releases/tag/v1.8.2"
     },
+    "aw-watcher-media-player": {
+      "version": "1.1.0",
+      "gitref": "refs/tags/v1.1.0",
+      "url": "https://github.com/2e3s/aw-watcher-media-player/releases/tag/v1.1.0"
+    },
     "helm-synth": {
       "version": "0.9.0",
       "gitref": "refs/tags/v0.9.0",
