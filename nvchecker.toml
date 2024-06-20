@@ -33,3 +33,9 @@ source = "github"
 github = "cupcakearmy/autorestic"
 use_latest_release = true
 prefix = "v"
+
+[aw-watcher-media-player]
+source = "github"
+github = "2e3s/aw-watcher-media-player"
+use_latest_release = true
+prefix = "v"
