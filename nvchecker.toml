@@ -1,0 +1,41 @@
+[__config__]
+oldver = "nvchecker.json"
+newver = "nvchecker_new.json"
+# keyfile = "secrets.toml"
+
+[helm-synth]
+source = "github"
+github = "mtytel/helm"
+use_max_tag = true
+prefix = "v"
+
+[inav-blackbox-explorer]
+source = "github"
+github = "iNavFlight/blackbox-log-viewer"
+use_latest_release = true
+
+# [radicle]
+
+[servicer]
+source = "github"
+github = "servicer-labs/servicer"
+use_latest_release = true
+prefix = "v"
+
+[wrestic]
+source = "github"
+github = "alvaro17f/wrestic"
+use_latest_release = true
+prefix = "v"
+
+[autorestic]
+source = "github"
+github = "cupcakearmy/autorestic"
+use_latest_release = true
+prefix = "v"
+
+[aw-watcher-media-player]
+source = "github"
+github = "2e3s/aw-watcher-media-player"
+use_latest_release = true
+prefix = "v"
